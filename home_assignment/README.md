@@ -48,6 +48,7 @@ This launches:
 - **Postgres** on `localhost:5432` with `user=kobi`, `password=kobi`, `db=test`
 - **Trino** on `localhost:8080` (after Postgres is healthy)
 
+### 2) (Optional) Wire Trino to Postgres
 
 
 ### 3) Install Python dependencies
@@ -71,6 +72,8 @@ pip install -r requirements.txt
   - For delay metrics, we compute hour differences only when `date_utc >= COALESCE(static_fire_date_utc, date_utc)`. If `static_fire_date_utc` is null, we treat delay as 0 for that row (filtering out invalid/negative cases). See `aggregated.sql` and `delay.sql` for the exact logic.
 - **Incremental load**  
   - The incremental example demonstrates selecting new `id`s that do not already exist in `raw_level`. It shows both a **Trino-side** approach and a commented **DB-side insert** pattern.
+- **Aggregated table**  
+  - Aggregated table I can do it also with pandas dataframe transformation with merge to payloads, and explode, but it can also happends with sql query postgres syntax, i think is best fit here.
 - **Idempotency**  
   - Ingestion should be idempotent on `id` (unique identifier for a launch). Upserts/merges ensure re-runs don’t duplicate data.
 - **Trino is optional**  
