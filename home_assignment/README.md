@@ -14,12 +14,7 @@ This project ingests launch data into PostgreSQL and provides analytical SQL to 
   - [2) (Optional) Wire Trino to Postgres](#2-optional-wire-trino-to-postgres)
   - [3) Install Python dependencies](#3-install-python-dependencies)
 - [Design Choices & Assumptions](#design-choices--assumptions)
-- [How to Run Ingestion](#how-to-run-ingestion)
-- [How to Run Aggregations / Analytics](#how-to-run-aggregations--analytics)
-  - [Creating a `stg` view (for the analytics SQL)](#creating-a-stg-view-for-the-analytics-sql)
-  - [Run each analytic query](#run-each-analytic-query)
-- [How to Test / Validate](#how-to-test--validate)
-- [Troubleshooting](#troubleshooting)
+- [How to Run Ingestion and Check](#how-to-run-ingestion)
 
 ---
 
