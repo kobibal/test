@@ -48,7 +48,6 @@ This launches:
 - **Postgres** on `localhost:5432` with `user=kobi`, `password=kobi`, `db=test`
 - **Trino** on `localhost:8080` (after Postgres is healthy)
 
-### 2) (Optional) Wire Trino to Postgres
 
 
 ### 3) Install Python dependencies
