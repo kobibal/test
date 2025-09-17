@@ -1,0 +1,6 @@
+psycopg_binary==3.2.10
+psycopg==3.2.10
+trino==0.329.0
+pandas==2.2.2
+requests==2.31.0
+sqlalchemy==2.0.43
